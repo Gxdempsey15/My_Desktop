@@ -19,7 +19,7 @@
             <div class="widget">
                 <h3>Widget 01</h3>
                 <div class="notepad">
-                    <textarea name="message" id="note-area" cols="40" rows="20"></textarea>
+                    <textarea onload="loadNotes" name="message" id="note-area" cols="40" rows="20"></textarea>
                 </div>
                 <p>
                     <button id="#saveNoteBtn">Save</button>
@@ -69,8 +69,8 @@
 
     $("#saveNoteBtn").click(function(){
         var currentNotes = $("#note-area").val();
-        localStorage.setItem("notes", currentNotes)
-    })
+        localStorage.setItem("notes", currentNotes);    
+    });
 
 
 
